@@ -23,13 +23,11 @@ api/settings.py
 ```
 
 ### 5. Создать таблицы в БД
-Так же скорректировать 
 ```bash
 python manage.py migrate
 ```
 
 ### 6. Запустить вебсервер
-Так же скорректировать 
 ```bash
 python manage.py runserver
 ```
