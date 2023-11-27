@@ -40,6 +40,8 @@ python manage.py runserver
 Прикрутить активацию аккаунта через почту. Поможет ссылка:
 https://stackoverflow.com/questions/50298114/django-2-how-to-register-a-user-using-email-confirmation-and-cbvs
 
+исполнить команду ’git stash’
+
 ## Вторая секция
 
 ### 1. Изучить основные **git** комманды
@@ -48,6 +50,7 @@ https://proglib.io/p/git-cheatsheet
 ### 2. Создать новую ветку **develop** из **master**
 ### 3. Создать ветку **feature/email-notification** от **develop**
 ### 4. Внести изменения из первой секции в этой ветке
+’git stash pop’
 ### 5. Слить ветки в последовательности 
 `feature/email-notification` -> `develop` -> `master`
 
