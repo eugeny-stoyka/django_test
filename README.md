@@ -46,7 +46,7 @@ https://stackoverflow.com/questions/50298114/django-2-how-to-register-a-user-usi
 https://proglib.io/p/git-cheatsheet
 
 ### 2. Создать новую ветку **develop** из **master**
-### 3. Создать ветку **feature/email-notification**
+### 3. Создать ветку **feature/email-notification** от **develop**
 ### 4. Внести изменения из первой секции в этой ветке
 ### 5. Слить ветки в последовательности 
 `feature/email-notification` -> `develop` -> `master`
@@ -65,3 +65,15 @@ https://proglib.io/p/git-cheatsheet
 
 Слить в последовательности `feature/token-explaination` -> `develop` -> `master`
 
+## Четвертая секция
+
+### 1. Протестировать работоспособность ссылки на метод POST `/check_session/`
+### 2. Создать новую ветку **feature/check_session_fix** из **develop**
+### 3. Скорректировать релузльтат возвращаемого результата в вид
+```json
+{
+  "user": { "id": "foo", "name": "bar", "is_auth": false },
+  "session": { "id": "python", "expire_time": "tomorrow" }
+}
+```
+### 4. Слить в последовательности `feature/check_session_fix` -> `develop` -> `master`

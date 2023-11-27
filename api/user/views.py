@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login as auth_login
@@ -43,3 +44,12 @@ def login(request):
             messages.info(request, f'account done not exit plz sign in')
     form = AuthenticationForm()
     return render(request, 'user/login.html', {'form': form, 'title': 'log in'})
+
+def check_session(request):
+    print(type(request.user))
+    print(type(request.session))
+    print(request.user.__dict__)
+    print(request.session.__dict__)
+    print(request.user.id, request.user.username, request.user.is_authenticated)
+    print(request.session.session_key, request.session.get_expiry_date())
+    return JsonResponse({'foo': 'bar'})
