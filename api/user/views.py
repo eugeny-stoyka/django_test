@@ -16,7 +16,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             email = form.cleaned_data.get('email')
-            htmly = get_template('user/email.html')
+            htmly = get_template('email/email_registration.html')
             d = {'username': username}
             subject, from_email, to = 'welcome', 'your_email@gmail.com', email
             html_content = htmly.render(d)
